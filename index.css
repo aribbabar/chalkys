@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+:root {
+  --student-portfolio-color: rgb(30, 30, 30);
+  --web-house-color: #0583d2;
+  --fashion-house-color: #f1b82d;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  color: #fff;
+  font-weight: 400;
+  transition: 0.2s ease-in-out;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 33.33vh);
+}
+
+.container > * {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+.web-house-container {
+  background-color: var(--web-house-color);
+}
+
+.fashion-house-container {
+  background-color: var(--fashion-house-color);
+}
+
+.student-portfolio-container {
+  background-color: var(--student-portfolio-color);
+}
+
+.web-house-container:hover h1,
+.fashion-house-container:hover h1,
+.student-portfolio-container:hover h1 {
+  transform: scale(1.1);
+}
+
+@media (min-width: 700px) {
+  .container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 75vh 25vh;
+  }
+
+  .student-portfolio-container {
+    grid-column: span 2;
+  }
+}
