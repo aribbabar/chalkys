@@ -17,9 +17,9 @@ a {
   text-decoration: none;
 }
 
-h1 {
+p {
+  font-size: 24px;
   color: #fff;
-  font-weight: 400;
   transition: 0.2s ease-in-out;
 }
 
@@ -50,12 +50,6 @@ h1 {
   background-color: var(--student-portfolio-color);
 }
 
-.web-house-container:hover h1,
-.fashion-house-container:hover h1,
-.student-portfolio-container:hover h1 {
-  transform: scale(1.1);
-}
-
 @media (min-width: 700px) {
   .container {
     grid-template-columns: 1fr 1fr;
@@ -64,5 +58,11 @@ h1 {
 
   .student-portfolio-container {
     grid-column: span 2;
+  }
+
+  .web-house-container:hover p,
+  .fashion-house-container:hover p,
+  .student-portfolio-container:hover p {
+    transform: scale(1.1);
   }
 }
